@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface UtilizadorRepository extends CrudRepository<Utilizador, Integer>{
     
-    @Query(value = "SELECT * FROM utilizador WHERE", nativeQuery = true)
+    @Query(value = "SELECT * FROM utilizador", nativeQuery = true)
     Iterable<Utilizador> findAllUsers();
 
 }
